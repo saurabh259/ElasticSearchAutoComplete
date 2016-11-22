@@ -9,5 +9,9 @@ ElasticSearch webapp implementing <b>search as you type functionality (also Auto
 <br>5. Deploy webapp-api.war.
 <br>6. Access service via :<em> http://localhost:8080/webapp-api/autoComplete</em>
 
-
+#Autocomplete
 ![Alt text](AutoComplete.PNG?raw=true "Screenshot")
+#Empty Searh Box
+![Alt text](ES-search2.PNG?raw=true "Screenshot2")
+#No Result Found!
+![Alt text](ES-search3.PNG?raw=true "Screenshot3")
