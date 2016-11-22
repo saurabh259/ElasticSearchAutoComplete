@@ -8,3 +8,6 @@ ElasticSearch webapp implementing <b>search as you type funnctionality (also Aut
 <br>4. Index data or use IndexApiTest.java to index data to ElasticSearch using java client.
 <br>5. Deploy webapp-api.war.
 <br>6. Access service via :<em> http://localhost:8080/webapp-api/autoComplete</em>
+
+
+![Alt text](AutoComplete.PNG?raw=true "Screenshot")
