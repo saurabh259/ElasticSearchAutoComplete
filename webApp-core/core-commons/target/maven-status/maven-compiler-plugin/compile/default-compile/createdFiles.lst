@@ -1,0 +1,4 @@
+com\WebAppES\dto\PostRequest.class
+com\WebAppES\posts\model\PostBo.class
+com\WebAppES\dto\PostListingResponse.class
+com\WebAppES\posts\model\IndexFields.class

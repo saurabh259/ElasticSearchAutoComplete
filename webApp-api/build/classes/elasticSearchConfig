@@ -1,0 +1,72 @@
+
+DELETE /posts	
+
+DELETE /posts
+PUT /posts
+{
+   "settings": {
+      "analysis": {
+         "filter": {
+            "nGram_filter": {
+               "type": "nGram",
+               "min_gram": 2,
+               "max_gram": 20,
+               "token_chars": [
+                  "letter",
+                  "digit",
+                  "punctuation",
+                  "symbol"
+               ]
+            }
+         },
+         "analyzer": {
+            "nGram_analyzer": {
+               "type": "custom",
+               "tokenizer": "whitespace",
+               "filter": [
+                  "lowercase",
+                  "asciifolding",
+                  "nGram_filter"
+               ]
+            },
+            "whitespace_analyzer": {
+               "type": "custom",
+               "tokenizer": "whitespace",
+               "filter": [
+                  "lowercase",
+                  "asciifolding"
+               ]
+            }
+         }
+      }
+   },
+   "mappings": {
+      "post": {
+         "_all": {
+            "index_analyzer": "nGram_analyzer",
+            "search_analyzer": "whitespace_analyzer"
+         },
+        "properties": {
+                "id":{
+                     "type":"string",
+                     "index":"not_analyzed"
+            },
+            "userName":{
+                "type": "string",
+                "index_analyzer": "nGram_analyzer",
+                "search_analyzer": "whitespace_analyzer"
+            },
+            "postData":{
+                "type": "string",
+                "index_analyzer": "nGram_analyzer",
+                "search_analyzer": "whitespace_analyzer"
+            }
+        }
+      }
+   }
+}
+
+
+
+GET /posts/_mapping
+GET /posts/_settings
