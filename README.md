@@ -1,5 +1,5 @@
 # ElasticSearchAutoComplete
-ElasticSearch webapp implementing <b>search as you type funnctionality (also Autocomplete)</b> , built over Java(Spring)
+ElasticSearch webapp implementing <b>search as you type functionality (also Autocomplete)</b> , built over Java(Spring)
 
 #Installation Steps-
 <br>1.Clone the repo
